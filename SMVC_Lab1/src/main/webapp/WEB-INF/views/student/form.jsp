@@ -8,14 +8,15 @@
 <base href="${pageContext.servletContext.contextPath}/">
 </head>
 <body>
-	<h2>SINH VIÊN POLY</h2>
-	<form action="student/save-data.htm" method="post">
+	<h2>SINH VIÊN</h2>
+	<form action="student/save" method="post">
 
 		<div>Họ và tên</div>
 		<input name="name" />
 		<div>Điểm trung bình</div>
 		<input name="mark" />
 		<div>Chuyên ngành</div>
+		<!-- cùng chung name nên chỉ chọn 1 trong 2 -->
 		<label> <input type="radio" name="major" value="APP" /> Ứng
 			dụng phần mềm
 		</label> <label> <input type="radio" name="major" value="WEB" />
