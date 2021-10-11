@@ -13,8 +13,8 @@ public class StudentController {
 	@RequestMapping("index")
 	public String index(ModelMap model) {
 		Student student= new Student("Nguyễn Văn Tèo",9.5,"WEB");
-		model.addAttribute("student", student);
-		return "student";
+		model.addAttribute("student123", student);
+		return "student2";
 
 	}
 
