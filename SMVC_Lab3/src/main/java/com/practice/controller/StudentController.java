@@ -1,7 +1,11 @@
 package com.practice.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,6 +20,14 @@ public class StudentController {
 		model.addAttribute("student123", student);
 		return "student2";
 
+	}
+	
+	@ModelAttribute("majors")
+	public Map<String, String> getMajors() {
+		Map<String, String> majors = new HashMap<>();
+		majors.put("APP", "Ứng dụng phần mềm");
+		majors.put("WEB", "Thiết kế trang web");
+		return majors;
 	}
 
 }
