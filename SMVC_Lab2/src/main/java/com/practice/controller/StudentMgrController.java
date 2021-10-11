@@ -3,6 +3,7 @@ package com.practice.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/student-mgr")
@@ -15,9 +16,14 @@ public class StudentMgrController {
 	}
 
 	@RequestMapping(params = "btnInsert")
-	public String insert(ModelMap model) {
+	public String insert(ModelMap model, 
+			@RequestParam("name") String name,@RequestParam("mark") Double mark,
+			@RequestParam("major") String major) {
 		model.addAttribute("message", "Bạn gọi insert()");
-		return "/student/student-mgr";
+		model.addAttribute("name", name);
+		model.addAttribute("mark", mark);
+		model.addAttribute("major", major);
+		return "/student/sucess";
 	}
 
 	@RequestMapping(params = "btnUpdate")
