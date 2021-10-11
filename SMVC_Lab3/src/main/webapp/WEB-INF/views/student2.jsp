@@ -14,8 +14,11 @@
 		<form:input path="name" />
 		<div>Điểm</div>
 		<form:input path="mark" />
+		<!--  <div>Chuyên ngành</div>
+		<form:radiobuttons path="major" items="${majors}" /> -->
+
 		<div>Chuyên ngành</div>
-		<form:radiobuttons path="major" items="${majors}" />
+		<form:radiobuttons path="major" items="${majors}" itemValue="id" itemLabel="name" />
 		<div>
 			<button>Cập nhật</button>
 		</div>
