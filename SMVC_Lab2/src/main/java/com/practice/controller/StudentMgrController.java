@@ -5,6 +5,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.practice.bean.Student;
+
 @Controller
 @RequestMapping("/student-mgr")
 public class StudentMgrController {
@@ -27,9 +29,10 @@ public class StudentMgrController {
 	}
 
 	@RequestMapping(params = "btnUpdate")
-	public String update(ModelMap model) {
+	public String update(ModelMap model, Student student) {
 		model.addAttribute("message", "Bạn gọi update()");
-		return "/student/student-mgr";
+		model.addAttribute("student123",student);
+		return "/student/sucess";
 	}
 
 	@RequestMapping(params = "btnDelete")

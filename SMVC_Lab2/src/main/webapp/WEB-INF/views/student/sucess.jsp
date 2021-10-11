@@ -10,9 +10,9 @@
 <body>
 <h3>Thông tin sinh viên</h3>
 <ul>
-	<li>Họ và tên: ${name}</li>
-	<li>Điểm trung bình: ${mark}</li>
-	<li>Chuyên ngành: ${major}</li>
+	<li>Họ và tên: ${student123.name}</li>
+	<li>Điểm trung bình: ${student123.mark}</li>
+	<li>Chuyên ngành: ${student123.major}</li>
 </ul>
 
 </body>
