@@ -3,13 +3,17 @@ package com.practice.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
-public class WelcomeController {
+public class StudentController {
 	
-	@RequestMapping ("/welcome")
-	public String welcome() {
-		return "welcome";
+	@RequestMapping("/student/form")
+	public String showForm()
+	{
+		return "/student/form";
 	}
 	
+	
+	
+	
+
 }
