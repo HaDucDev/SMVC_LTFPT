@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.practice.bean.Major;
 import com.practice.bean.Student;
 
+
 @Controller
 @RequestMapping("/student/")
 public class StudentController {
