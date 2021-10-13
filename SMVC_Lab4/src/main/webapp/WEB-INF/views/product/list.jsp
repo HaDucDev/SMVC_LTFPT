@@ -38,10 +38,24 @@ th {
 		<c:forEach var="p" items="${prods}">
 			<tr>
 				<td>${p.name}</td>
-				<td><f:formatNumber value="${p.unitPrice}" type="currency" /></td>
+				<td>
+					<f:setLocale value="vi_VN" scope="session" /> 
+					<f:formatNumber value="${p.unitPrice}" type="currency" />
+				</td>
 				<td><f:formatNumber value="${p.discount}" type="percent" /></td>
 				<td><f:formatNumber value="${p.newPrice}" type="currency" /></td>
 			</tr>
+			
+			<%-- <td>
+					<f:setLocale value="vi_VN" scope="session" /> 
+					<f:formatNumber value="${p.unitPrice}" type="currency" />
+				</td>
+				<td><f:formatNumber value="${p.discount}" type="percent" /></td>
+				<!-- dinh dang tuy chinh cach 2 vnd -->
+				<td><f:formatNumber value="${p.newPrice}" pattern="###,###,###.## VND" /></td>
+				 <!-- co the lam theo vs data nhu sau -->
+				 <li>Ngày nhập: <f:formatDate value="${product.date}" pattern="dd-MM-yyyy"/> </li>
+				--%>
 		</c:forEach>
 	</table>
 </body>
