@@ -31,6 +31,14 @@ li>label {
 		<c:if test="${bean.mark >= 9}">
 			<li><label>Danh hiệu:</label> ONG VÀNG</li>
 		</c:if>
+		<li><label>Xếp loại:</label> <c:choose>
+				<c:when test="${bean.mark < 5}">YẾU</c:when>
+				<c:when test="${bean.mark < 6.5}">TRUNG BÌNH</c:when>
+				<c:when test="${bean.mark < 7.5}">KHÁ</c:when>
+				<c:when test="${bean.mark < 9}">GIỎI</c:when>
+				<c:otherwise>XUẤT SẮC</c:otherwise>
+			</c:choose></li>
+
 
 	</ul>
 	<ul>
@@ -40,6 +48,14 @@ li>label {
 		<c:if test="${list[0].mark >= 9}">
 			<li><label>Danh hiệu:</label> ONG VÀNG</li>
 		</c:if>
+		<li><label>Xếp loại:</label> <c:choose>
+				<c:when test="${list[0].mark < 5}">YẾU</c:when>
+				<c:when test="${list[0].mark < 6.5}">TRUNG BÌNH</c:when>
+				<c:when test="${list[0].mark < 7.5}">KHÁ</c:when>
+				<c:when test="${list[0].mark < 9}">GIỎI</c:when>
+				<c:otherwise>XUẤT SẮC</c:otherwise>
+			</c:choose></li>
+
 
 	</ul>
 	<ul>
@@ -51,6 +67,14 @@ li>label {
 		<c:if test="${map['NHL'].mark >= 9}">
 			<li><label>Danh hiệu:</label> ONG VÀNG</li>
 		</c:if>
+		<li><label>Xếp loại:</label> <c:choose>
+				<c:when test="${map['NHL'].mark < 5}">YẾU</c:when>
+				<c:when test="${map['NHL'].mark < 6.5}">TRUNG BÌNH</c:when>
+				<c:when test="${map['NHL'].mark < 7.5}">KHÁ</c:when>
+				<c:when test="${map['NHL'].mark < 9}">GIỎI</c:when>
+				<c:otherwise>XUẤT SẮC</c:otherwise>
+			</c:choose></li>
+
 
 	</ul>
 
